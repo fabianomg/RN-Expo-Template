@@ -18,5 +18,5 @@ export const Text = styled.Text`
   color: #7d40e7;
   font-size: 24;
   text-align: center;
-  text-shadow: 0px 0px 10px #7d40e7
+  text-shadow: 0px 0px 10px #7d40e7;
 `;

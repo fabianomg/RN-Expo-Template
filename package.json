@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-expo-basic",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "keywords": [
     "react-native",
@@ -25,7 +25,9 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo/vector-icons": "^10.0.6",
     "@react-native-community/masked-view": "0.1.5",
+    "@react-navigation/bottom-tabs": "^5.0.7",
     "@react-navigation/native": "^5.0.6",
     "@react-navigation/stack": "^5.0.6",
     "axios": "^0.19.2",
