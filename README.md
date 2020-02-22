@@ -1,11 +1,14 @@
 
 <!-- PROJECT SHIELDS -->
 
-[![npm](https://img.shields.io/npm/v/react-native-template-expo-basic.svg?label=npm%0.0.1package)](https://www.npmjs.com/package/react-native-template-expo-basic)
-[![npm](https://img.shields.io/npm/dt/react-native-template-rocketseat-basic.svg)](https://www.npmjs.com/package/react-native-template-rocketseat-basic)
-[![GitHub issues](https://img.shields.io/github/issues-raw/rocketseat/react-native-template-rocketseat-basic.svg)](https://github.com/Rocketseat/react-native-template-rocketseat-basic/issues)
-[![GitHub last commit](https://img.shields.io/github/last-commit/rocketseat/react-native-template-rocketseat-basic.svg)](https://github.com/Rocketseat/react-native-template-rocketseat-basic/commits/master)
+[![expo](https://img.shields.io/npm/v/expo.svg?label=Expo)](https://www.npmjs.com/package/react-native-template-expo-basic)
+[![npm](https://img.shields.io/npm/v/react-native-template-expo-basic.svg?label=npm-package)](https://www.npmjs.com/package/react-native-template-expo-basic)
 [![NPM](https://img.shields.io/npm/l/react-native-template-rocketseat-basic.svg)](https://choosealicense.com/licenses/mit)
+
+<!-- [![GitHub issues](https://img.shields.io/github/issues-raw/rocketseat/react-native-template-rocketseat-basic.svg)](https://github.com/Rocketseat/react-native-template-rocketseat-basic/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/rocketseat/react-native-template-rocketseat-basic.svg)](https://github.com/Rocketseat/react-native-template-rocketseat-basic/commits/master)
+[![npm](https://img.shields.io/npm/dt/react-native-template-rocketseat-basic.svg)](https://www.npmjs.com/package/react-native-template-rocketseat-basic) 
+-->
 
 <!-- PROJECT LOGO -->
 <br />
@@ -14,7 +17,7 @@
     <img src="" alt="Logo">
   </a>
 
-  <h3 align="center">Template Rocketseat Basic</h3>
+  <h3 align="center">Template Expo Basic</h3>
 </p>
 
 <!-- TABLE OF CONTENTS -->
