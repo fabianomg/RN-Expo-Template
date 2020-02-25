@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-expo-basic",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": false,
   "keywords": [
     "react-native",
@@ -12,9 +12,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/solrachix/react-native-template-expo-basic.git"
+    "url": "git+https://github.com/solrachix/RN-Expo-Template.git"
   },
-  "homepage": "https://github.com/solrachix/react-native-template-expo-basic#readme",
+  "homepage": "https://github.com/solrachix/RN-Expo-Template#readme",
   "author": "Carlos Miguel <carlos.miguel.oliveira.17@gmail.com>",
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",

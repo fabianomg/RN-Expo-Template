@@ -1,7 +1,6 @@
 import styled from 'styled-components/native';
 
 export const ConsoleContainer = styled.View`
-  text-align: center;
   justify-content: center;
   align-items: center;
   background: #9d84e9;
