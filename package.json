@@ -1,11 +1,12 @@
 {
-  "name": "react-native-template-expo-basic",
-  "version": "1.0.3",
+  "name": "template-expo-basic",
+  "version": "1.0.5",
   "private": false,
   "keywords": [
     "react-native",
     "styled-components",
     "template",
+    "expo",
     "react-navigation",
     "axios"
   ],

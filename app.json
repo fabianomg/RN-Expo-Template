@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Blank Template",
-    "slug": "nubank",
+    "name": "Basic expo Template",
+    "slug": "Template",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { FaHome } from 'react-icons/fa';
+import Icon from "@expo/vector-icons/MaterialIcons";
 
 import Home from '$root/Pages/Home';
 
@@ -21,7 +21,7 @@ function Routes() {
           options={{
             tabBarLabel: 'Home',
             tabBarIcon: ({ color, size }) => (
-              <FaHome name="home" color={color} size={size} />
+              <Icon name="home" color={color} size={size} />
             ),
           }}/>
 
