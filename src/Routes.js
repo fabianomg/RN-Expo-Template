@@ -1,27 +1,50 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-import Icon from "@expo/vector-icons/MaterialIcons";
+import { ThemeContext } from 'styled-components';
 
-import Home from '$root/Pages/Home';
+import Icon from "@expo/vector-icons/Entypo";
 
-const { Screen, Navigator } = createBottomTabNavigator();
+import Main from './Pages/Main';
+
+import TabBar from './components/TabBar';
+const { Screen, Navigator } = createMaterialTopTabNavigator();
 
 function Routes() {
-  return (
+  const themeContext = useContext(ThemeContext).colors;
 
+  return (
     <NavigationContainer>
       <Navigator 
-        initialRouteName="Feed"
+        tabBarPosition="bottom"
+
+        keyboardDismissMode="on-drag"
+        initialRouteName="Main"
         tabBarOptions={{
-          activeTintColor: '#e91e63',
-        }}>
-        <Screen name="Home" component={Home}
+          activeTintColor: themeContext.primary,
+          showIcon: true,
+          showLabel: false,
+          indicatorStyle: {
+            position: 'absolute',
+            backgroundColor: themeContext.primary,
+            top: '0%'
+          }
+        }}
+        // tabBar={() => <TabBar />}
+        >
+
+        <Screen name="Main" component={Main}
           options={{
-            tabBarLabel: 'Home',
             tabBarIcon: ({ color, size }) => (
-              <Icon name="home" color={color} size={size} />
+              <Icon name="home" color={color} size={25} />
+            ),
+          }}/>
+
+        <Screen name="Next" component={Main}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <Icon name="controller-next" color={color} size={25} />
             ),
           }}/>
 
