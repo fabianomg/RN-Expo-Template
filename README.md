@@ -24,17 +24,17 @@
 
 ## Tabela de Conteúdo
 
-- [Tabela de Conteúdo](#tabela-de-conte%C3%BAdo)
+- [Tabela de Conteúdo](#tabela-de-conte%c3%bado)
 - [Sobre o Projeto](#sobre-o-projeto)
   - [Feito Com](#feito-com)
-- [Começando](#come%C3%A7ando)
-  - [Pré-requisitos](#pr%C3%A9-requisitos)
+- [Começando](#come%c3%a7ando)
+  - [Pré-requisitos](#pr%c3%a9-requisitos)
   - [Estrutura de Arquivos](#estrutura-de-arquivos)
-  - [Instalação](#instala%C3%A7%C3%A3o)
-  - [Edição](#edi%C3%A7%C3%A3o)
-  - [Publicação](#publica%C3%A7%C3%A3o)
-- [Contribuição](#contribui%C3%A7%C3%A3o)
-- [Licença](#licen%C3%A7a)
+  - [Instalação](#instala%c3%a7%c3%a3o)
+  - [Edição](#edi%c3%a7%c3%a3o)
+  - [Publicação](#publica%c3%a7%c3%a3o)
+- [Contribuição](#contribui%c3%a7%c3%a3o)
+- [Licença](#licen%c3%a7a)
 - [Contato](#contato)
 
 <!-- ABOUT THE PROJECT -->
@@ -74,16 +74,28 @@ Antes de seguirmos para as configurações e uso do template, é ideal que você
 A estrutura de arquivos está da seguinte maneira:
 
 ```bash
-rocketseat-basic
+RN-Expo-Template
 ├── assets/
 ├── src/
+│   ├── assets/
+│   │   └── logo.png
+│   ├── components/
 │   ├── Pages/
 │   │   └── Home/
 │   │       └── index.js
 │   │       └── style.js
 │   ├── services/
 │   │   └── api.js
+│   ├── styles/
+│   │   └── themes/
+│   │       └── index.js
+│   │       └── Dark.js
+│   │       └── Light.js
+│   │   └── index.js
+│   ├── utils/
+│   │   └── usePersistedState.js
 │   ├── routes.js
+├── .env
 ├── .gitignore
 ├── babel.config.js
 ├── App.js
@@ -103,8 +115,6 @@ Serão explicados os arquivos e diretórios na seção de [Edição](#edição).
 expo init --template react-native-expo-basic
 ```
 
-2. Depois do projeto criado você pode deletar o arquivo `App.js` da raiz, pois o arquivo `index.js` agora aponta para a pasta **src**.
-
 Com isso o projeto será criado com todas as dependências do template devidamente instaladas e linkadas, tal como os arquivos de configuração que são copiados para o projeto.
 
 ---
@@ -115,23 +125,18 @@ Nesta seção haverão instruções caso você queira editar o template, explica
 
 - **src** - Diretório contendo todos os arquivos da aplicação, é criado um diretório `src` para que o código da aplicação possa ser isolado em um diretório e facilmente portado para outros projetos, se necessário;
 
-  - **config** - Diretório para guardar os arquivos de configuração da aplicação, por exemplo, a configuração de uso do Reactotron e configuração de inicialização do Firebase;
 
-    - **ReactotronConfig.js** - Arquivo contendo a configuração do Reactotron para ser usado na aplicação;
-
-  - **images** - Diretório para armazenar imagens em geral que possam ser utilizadas na aplicação, esse diretório pode ser renomeado para `assets` e dentro de `assets` criar um novo diretório para guardar somente as imagens, assim é possível ter um diretório para guardar todo tipo de arquivo, e não apenas imagens;
+  - **assets** - Diretório para armazenar imagens em geral que possam ser utilizadas na aplicação, dentro de `assets` pode-se criar um novo diretório para guardar somente as imagens, assim é possível ter um diretório para guardar todo tipo de arquivo, e não apenas imagens;
 
   - **pages** - Diretório onde ficam as páginas (telas) da aplicação, como forma de padronização e boas práticas toda página fica dentro de um diretório com seu nome;
 
-    - **Main** - Diretório exemplo de uma página cujo nome é **Main**, por padrão foi adotado usar sempre como nome do diretório o nome da página em camelCase, dentro desse diretório é necessária a criação ao menos do arquivo `index.js`;
+    - **Home** - Diretório exemplo de uma página cujo nome é **Home**, por padrão foi adotado usar sempre como nome do diretório o nome da página em camelCase, dentro desse diretório é necessária a criação ao menos do arquivo `index.js`;
 
       - **index.js** - Arquivo com toda a lógica da página, tal como os componentes visuais a serem renderizados;
 
   - **services** - Diretório onde serão criados os arquivos relacionados a serviços utilizados na aplicação, por exemplo, requisições HTTP, autenticação com Firebase ou qualquer outro serviço que for utilizado;
 
     - **api.js** - Arquivo com a configuração da biblioteca Axios para envio de requisições HTTP, o endereço que vem configurado por padrão é para a API do Github;
-
-  - **index.js** - Arquivo responsável por centralizar o código do diretório `src`, nele são chamadas as rotas tal como qualquer outra configuração que precise ser executada na inicialização da aplicação, ele é como um _Entry Point_ do diretório `src`;
 
   - **routes.js** - Arquivo com as configurações de navegação da aplicação, nele são criados os Navigators disponibilizados na biblioteca React Navigation;
 
@@ -141,11 +146,10 @@ Nesta seção haverão instruções caso você queira editar o template, explica
 
 - **babel.config.js** - Arquivo de configuração do Babel, é nele que é configurado o Babel Plugin Root Import para aceitar imports absolutos na aplicação usando o diretório `src` como raiz;
 
-- **dependencies.json** - Arquivo contendo apenas um objeto com a lista de dependências que devem ser instaladas na aplicação, vale lembrar que as dependências que já vem por padrão no projeto como `react` e `react-native` não precisam estar nessa lista, a menos que você queira gerenciar a versão dessas libs;
+- **App.js** - Arquivo raiz da aplicação, também chamado de _Entry Point_, é o primeiro arquivo chamado no momento do build e execução da aplicação, nele é chamado o arquivo `src/routes.js` que por sua vez chama as rotas da aplicação;
 
-- **devDependencies.json** - Arquivo contendo apenas um objeto com a lista de dependências de desenvolvimento que devem ser instaladas na aplicação, vale lembrar que as dependências de desenvolvimento que já vem por padrão no projeto como `@babel/core`, `@babel/runtime`, entre outras, não precisam estar nessa lista, a menos que você queira gerenciar a versão dessas libs;
+- **.editorconfig** - Arquivo de configuração do JavaScript no Editor, ele é o responsável por ativar o Auto Complete de códigos JavaScript na aplicação;
 
-- **index.js** - Arquivo raiz da aplicação, também chamado de _Entry Point_, é o primeiro arquivo chamado no momento do build e execução da aplicação, nele é chamado o arquivo `src/index.js` que por sua vez chama as rotas da aplicação;
 
 - **jsconfig.json** - Arquivo de configuração do JavaScript no Editor, ele é o responsável por ativar o Auto Complete de códigos JavaScript na aplicação;
 
