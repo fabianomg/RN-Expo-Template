@@ -2,11 +2,11 @@ import React from 'react';
 import { AppRegistry, StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 
-import Routes from './src/routes';
+import Routes from '@app/routes';
 import {name as appName} from './app.json';
 
-import usePersistedState from './src/utils/usePersistedState';
-import { themes } from './src/styles';
+import usePersistedState from '@app/utils/usePersistedState';
+import { themes } from '@app/styles';
 
 export default function App() {
   const [theme, setTheme] = usePersistedState('theme', themes.Light);

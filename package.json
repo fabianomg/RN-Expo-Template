@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-expo-basic",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": false,
   "keywords": [
     "react-native",
@@ -32,8 +32,6 @@
     "@react-navigation/native": "^5.0.6",
     "@react-navigation/stack": "^5.0.6",
     "axios": "^0.19.2",
-    "babel-plugin-module-resolver": "^4.0.0",
-    "eslint-import-resolver-babel-module": "^5.1.2",
     "expo": "~36.0.0",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
@@ -48,6 +46,18 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "babel-preset-expo": "~8.0.0"
+    "babel-preset-expo": "~8.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-import-resolver-babel-module": "^5.1.2",
+    "eslint-plugin-flowtype": "^4.7.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^2.0.4",
+    "prettier-eslint": "^9.0.1",
+    "schedule": "^0.5.0"
   }
 }

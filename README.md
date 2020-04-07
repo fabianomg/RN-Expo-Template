@@ -69,6 +69,9 @@ Antes de seguirmos para as configurações e uso do template, é ideal que você
 
 [Ambiente Expo (Android/iOS)](http://www.matera.com/blog/post/aplicacoes-mobile-multiplataforma-com-react-native-e-expo)
 
+E deverá instalar também dois plugins no VSCode, sendo eles o ESLint e o Prettier.
+Como instalar: [VSCode extension](https://code.visualstudio.com/docs/editor/extension-gallery)
+
 ### Estrutura de Arquivos
 
 A estrutura de arquivos está da seguinte maneira:
@@ -139,17 +142,14 @@ Nesta seção haverão instruções caso você queira editar o template, explica
     - **api.js** - Arquivo com a configuração da biblioteca Axios para envio de requisições HTTP, o endereço que vem configurado por padrão é para a API do Github;
 
   - **routes.js** - Arquivo com as configurações de navegação da aplicação, nele são criados os Navigators disponibilizados na biblioteca React Navigation;
+  - 
+- **.babelrc** - Arquivo de configuração do Babel, é nele que é configurado o Babel Plugin Root Import para aceitar imports absolutos na aplicação usando o diretório `src` como raiz;
 
 - **.editorconfig** - Arquivo destinado à configuração do plugin Editor Config, que padroniza algumas configurações para o editor em diferentes ambientes;
 
-- **.eslintrc.json** - Arquivo de configuração do ESLint, é nele que são inseridas as regras e configurações de Linting do projeto, tal como a configuração do Resolver para o Babel Plugin Root Import e configuração da variável global `__DEV__`;
-
-- **babel.config.js** - Arquivo de configuração do Babel, é nele que é configurado o Babel Plugin Root Import para aceitar imports absolutos na aplicação usando o diretório `src` como raiz;
+- **.eslintrc** - Arquivo de configuração do ESLint, é nele que são inseridas as regras e configurações de Linting do projeto;
 
 - **App.js** - Arquivo raiz da aplicação, também chamado de _Entry Point_, é o primeiro arquivo chamado no momento do build e execução da aplicação, nele é chamado o arquivo `src/routes.js` que por sua vez chama as rotas da aplicação;
-
-- **.editorconfig** - Arquivo de configuração do JavaScript no Editor, ele é o responsável por ativar o Auto Complete de códigos JavaScript na aplicação;
-
 
 - **jsconfig.json** - Arquivo de configuração do JavaScript no Editor, ele é o responsável por ativar o Auto Complete de códigos JavaScript na aplicação;
 

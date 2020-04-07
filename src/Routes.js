@@ -6,9 +6,9 @@ import { ThemeContext } from 'styled-components';
 
 import Icon from "@expo/vector-icons/Entypo";
 
-import Main from './Pages/Main';
+import Main from '@pages/Main';
 
-import TabBar from './components/TabBar';
+import TabBar from '@components/TabBar';
 const { Screen, Navigator } = createMaterialTopTabNavigator();
 
 function Routes() {
