@@ -115,7 +115,7 @@ Serão explicados os arquivos e diretórios na seção de [Edição](#edição).
 1. Para instalar e utilizar esse template o processo é bem simples, basta criar um projeto novo utilizando o comando:
 
 ```sh
-expo init --template react-native-expo-basic
+expo init --template react-native-template-expo-basic
 ```
 
 Com isso o projeto será criado com todas as dependências do template devidamente instaladas e linkadas, tal como os arquivos de configuração que são copiados para o projeto.
